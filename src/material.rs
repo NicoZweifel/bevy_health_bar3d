@@ -9,7 +9,7 @@ use crate::constants::BAR_SHADER_HANDLE;
 
 #[derive(Asset, AsBindGroup, Debug, Clone, Reflect)]
 #[bind_group_data(BarMaterialKey)]
-pub(crate) struct BarMaterial {
+pub struct BarMaterial {
     #[uniform(0)]
     pub value_and_dimensions: Vec4,
     // (value, width, height, border_width) vec4 to be 16byte aligned
@@ -29,7 +29,7 @@ pub(crate) struct BarMaterial {
 }
 
 #[derive(Eq, PartialEq, Hash, Clone)]
-pub(crate) struct BarMaterialKey {
+pub struct BarMaterialKey {
     vertical: bool,
     border: bool,
 }
