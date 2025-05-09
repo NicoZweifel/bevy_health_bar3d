@@ -9,6 +9,7 @@ use crate::constants::{
 
 /// Component to configure a bar
 #[derive(Component, Debug, Clone, Reflect)]
+#[reflect(Component)]
 pub struct BarSettings<T: Percentage + Component + TypePath> {
     /// Configure the width of the bar
     pub width: f32,
